@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      # 服务监听端口（容器内），默认 3000
+      - PORT=3000
+    restart: unless-stopped
